@@ -10,8 +10,11 @@
 
     <div class="content">
         <p class='site-description'><?php bloginfo( 'description' ); ?></p>
-        <h3>Наши Курсы:</h3>
-            <ul class="curs">
+        <h3>
+            <?php $post_type = get_post_type_object( 'scv_courses' );
+            echo $post_type->labels->name ; ?>
+        </h3>
+            <ul class="courses">
 
                 <?php
                 $args = array(

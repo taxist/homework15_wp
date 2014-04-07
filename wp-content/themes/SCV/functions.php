@@ -1,9 +1,12 @@
 <?php
-function geekhub_scripts() {
-	wp_enqueue_style( 'geekhub-style', get_stylesheet_uri() );
+function geekhub_stylesheets() {
+    wp_enqueue_style( 'geekhub-style', get_stylesheet_uri() );
 }
 
-add_action( 'wp_enqueue_scripts', 'geekhub_scripts' );
+load_theme_textdomain('geekhub', get_template_directory() . '/languages');
+
+add_action( 'wp_enqueue_scripts', 'geekhub_stylesheets' );
+
 
 register_nav_menus( array(
 	'main_menu' => 'Main Menu'
@@ -15,45 +18,34 @@ add_theme_support( 'post-thumbnails' );
 function create_sponsors() {
 
     $labels = array(
-        'name'                => _x( 'Sponsors', 'Post Type General Name', 'scv' ),
-        'singular_name'       => _x( 'Sponsor', 'Post Type Singular Name', 'scv' ),
-        'menu_name'           => __( 'Sponsors', 'scv' ),
-        'parent_item_colon'   => __( 'Parent Sponsor', 'scv' ),
-        'all_items'           => __( 'All Sponsors', 'scv' ),
-        'view_item'           => __( 'View Sponsor', 'scv' ),
-        'add_new_item'        => __( 'Add new Sponsor', 'scv' ),
-        'add_new'             => __( 'ADD Sponsor', 'scv' ),
-        'edit_item'           => __( 'Edit sponsor', 'scv' ),
-        'update_item'         => __( 'Update sponsor', 'scv' ),
-        'search_items'        => __( 'Find sponsor', 'scv' ),
-        'not_found'           => __( 'no sponsors found', 'scv' ),
-        'not_found_in_trash'  => __( 'Not found in Trash', 'scv' ),
-    );
+        'name'                => __( 'Sponsors',  'geekhub' ),
+        'singular_name'       => __( 'Sponsor', 'geekhub' ),
+        'menu_name'           => __( 'Sponsors', 'geekhub' ),
+        'all_items'           => __( 'All Sponsors', 'geekhub' ),
+        'view_item'           => __( 'View Sponsor', 'geekhub' ),
+        'add_new_item'        => __( 'Add new Sponsor', 'geekhub' ),
+        'add_new'             => __( 'ADD Sponsor', 'geekhub' ),
+        'edit_item'           => __( 'Edit sponsor', 'geekhub' ),
+        'update_item'         => __( 'Update sponsor', 'geekhub' ),
+        'search_items'        => __( 'Find sponsor', 'geekhub' ),
+        'not_found'           => __( 'no sponsors found', 'geekhub' ),
+     );
     $args = array(
-        'label'               => __( 'scv_sponsors', 'scv' ),
-        'description'         => __( 'The sponsors of our project.', 'scv' ),
+        'label'               => __( 'Our Sponsors', 'geekhub' ),
+        'description'         => __( 'The sponsors of our project.', 'geekhub' ),
         'labels'              => $labels,
-        'supports'            => array( 'thumbnail','title' ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
-        'hierarchical'        => false,
+        'supports'            => array( 'thumbnail','title','editor' ),
         'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
         'menu_position'       => 5,
         'menu_icon'           => 'http://localhost/wordpress/wp-content/themes/scv/images/settings-20.png',
-        'can_export'          => false,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'page',
+        'taxonomies'          => array( 'category', 'post_tag' )
+
     );
     register_post_type( 'scv_sponsors', $args );
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'create_sponsors', 0 );
+add_action( 'init', 'create_sponsors', 1 );
 
 
 
@@ -63,92 +55,68 @@ add_action( 'init', 'create_sponsors', 0 );
 function create_courses() {
 
     $labels = array(
-        'name'                => _x( 'Courses', 'Post Type General Name', 'scv' ),
-        'singular_name'       => _x( 'Course', 'Post Type Singular Name', 'scv' ),
-        'menu_name'           => __( 'Courses', 'scv' ),
-        'parent_item_colon'   => __( 'Parent Course', 'scv' ),
-        'all_items'           => __( 'All Courses', 'scv' ),
-        'view_item'           => __( 'View Course', 'scv' ),
-        'add_new_item'        => __( 'Add new Course', 'scv' ),
-        'add_new'             => __( 'ADD Course', 'scv' ),
-        'edit_item'           => __( 'Edit Course', 'scv' ),
-        'update_item'         => __( 'Update Course', 'scv' ),
-        'search_items'        => __( 'Find Course', 'scv' ),
-        'not_found'           => __( 'no Courses found', 'scv' ),
-        'not_found_in_trash'  => __( 'No Courses found in Trash', 'scv' ),
+        'name'                => __( 'Courses', 'geekhub' ),
+        'singular_name'       => __( 'Course', 'geekhub' ),
+        'menu_name'           => __( 'Our Courses', 'geekhub' ),
+        'all_items'           => __( 'All Courses', 'geekhub' ),
+        'view_item'           => __( 'View Course', 'geekhub' ),
+        'add_new_item'        => __( 'Add new Course', 'geekhub' ),
+        'add_new'             => __( 'ADD Course', 'geekhub' ),
+        'edit_item'           => __( 'Edit Course', 'geekhub' ),
+        'search_items'        => __( 'Find Course', 'geekhub' ),
+        'not_found'           => __( 'no Courses found', 'geekhub' ),
+
     );
     $args = array(
-        'label'               => __( 'scv_courses', 'scv' ),
-        'description'         => __( 'The courses of our project.', 'scv' ),
+        'label'               => _x( 'scv_courses', 'geekhub' ),
+        'description'         => _x( 'The courses of our project.', 'geekhub' ),
         'labels'              => $labels,
         'supports'            => array( 'thumbnail','title','editor' ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
-        'hierarchical'        => false,
         'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
         'menu_position'       => 6,
         'menu_icon'           => 'http://localhost/wordpress/wp-content/themes/scv/images/settings-20.png',
-        'can_export'          => false,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'page',
+        'taxonomies'          => array( 'category', 'post_tag' ),
+
     );
     register_post_type( 'scv_courses', $args );
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'create_courses', 0 );
+add_action( 'init', 'create_courses', 2);
 
-add_post_type_support( 'scv_sponsors', 'thumbnail','title' );
+
 
 
 
 function create_team() {
 
     $labels = array(
-        'name'                => _x( 'Team', 'Post Type General Name', 'scv' ),
-        'singular_name'       => _x( 'Teacher', 'Post Type Singular Name', 'scv' ),
-        'menu_name'           => __( 'Team', 'scv' ),
-        'parent_item_colon'   => __( 'Parent member', 'scv' ),
-        'all_items'           => __( 'All teachers', 'scv' ),
-        'view_item'           => __( 'View teacher', 'scv' ),
-        'add_new_item'        => __( 'Add new teacher', 'scv' ),
-        'add_new'             => __( 'ADD teacher', 'scv' ),
-        'edit_item'           => __( 'Edit teacher', 'scv' ),
-        'update_item'         => __( 'Update teacher', 'scv' ),
-        'search_items'        => __( 'Find teacher', 'scv' ),
-        'not_found'           => __( 'no teachers found', 'scv' ),
-        'not_found_in_trash'  => __( 'Not found in Trash', 'scv' ),
+        'name'                => __( 'Team', 'geekhub' ),
+        'singular_name'       => __( 'Teacher', 'geekhub' ),
+        'menu_name'           => __( 'Team', 'geekhub' ),
+        'all_items'           => __( 'All teachers', 'geekhub' ),
+        'view_item'           => __( 'View teacher', 'geekhub' ),
+        'add_new_item'        => __( 'Add new teacher', 'geekhub' ),
+        'add_new'             => __( 'ADD teacher', 'geekhub' ),
+        'edit_item'           => __( 'Edit teacher', 'geekhub' ),
+
     );
     $args = array(
-        'label'               => __( 'scv_teachers', 'scv' ),
-        'description'         => __( 'The teachers of our project.', 'scv' ),
+        'label'               => __( 'Our teachers', 'geekhub' ),
+        'description'         => __( 'The teachers of our project.', 'geekhub' ),
         'labels'              => $labels,
         'supports'            => array( 'thumbnail','title','editor','custom-fields' ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
-        'hierarchical'        => false,
-        'public'              => true,
-        'show_ui'             => true,
-        'show_in_menu'        => true,
-        'show_in_nav_menus'   => true,
-        'show_in_admin_bar'   => true,
-        'menu_position'       => 8,
         'menu_icon'           => 'http://localhost/wordpress/wp-content/themes/scv/images/settings-20.png',
-        'can_export'          => false,
-        'has_archive'         => true,
-        'exclude_from_search' => false,
-        'publicly_queryable'  => true,
-        'capability_type'     => 'page',
+        'menu_position'       => 7,
+        'public'              => true,
+        'taxonomies'          => array( 'category', 'post_tag' ),
+
     );
     register_post_type( 'scv_teachers', $args );
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'create_team', 0 );
+add_action( 'init', 'create_team', 3 );
 
 
 
@@ -217,9 +185,7 @@ register_sidebar( array(
     'id' => 'custom-widget-area',
     'description' => __( 'An optional custom widget area for your site', 'twentyten' ),
     'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-    'after_widget' => "</li>",
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
+    'after_widget' => "</li>"
+
 ) );
 
-?>

@@ -4,10 +4,12 @@
     // Custom widget area start
     if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Custom Widget Area') ) : ?>
     <?php endif; ?>
-    <h5><?php echo category_description(4); ?></h5>
+
     <ul class="sponsors">
-
-
+           <h5>
+               <?php $post_type = get_post_type_object('scv_sponsors') ;
+               echo $post_type->labels->name ; ?>
+           </h5>
         <?php
         $args = array(
             'post_type' => 'scv_sponsors',

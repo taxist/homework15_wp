@@ -1,0 +1,189 @@
+# Copyright (C) 2013 the WordPress team
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: scv\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/twentythirteen\n"
+"POT-Creation-Date: 2014-04-05 21:33+0200\n"
+"PO-Revision-Date: 2014-04-05 22:37+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_x;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../functions.php:21 ../functions.php:23
+msgid "Sponsors"
+msgstr "Наши Спонсоры"
+
+#: ../functions.php:22
+msgid "Sponsor"
+msgstr "Спонсор"
+
+#: ../functions.php:24
+msgid "All Sponsors"
+msgstr "Все спонсоры"
+
+#: ../functions.php:25
+msgid "View Sponsor"
+msgstr "Смотреть курс"
+
+#: ../functions.php:26
+msgid "Add new Sponsor"
+msgstr "Добавить спонсора"
+
+#: ../functions.php:27
+msgid "ADD Sponsor"
+msgstr "Добавить спонсор"
+
+#: ../functions.php:28
+msgid "Edit sponsor"
+msgstr "Спонсор"
+
+#: ../functions.php:29
+msgid "Update sponsor"
+msgstr "Спонсор"
+
+#: ../functions.php:30
+msgid "Find sponsor"
+msgstr "Спонсор"
+
+#: ../functions.php:31
+msgid "no sponsors found"
+msgstr "Наши Спонсоры"
+
+#: ../functions.php:34
+msgid "Our Sponsors"
+msgstr "Наши спонсоры:"
+
+#: ../functions.php:35
+msgid "The sponsors of our project."
+msgstr "Курсы нашего проекта."
+
+#: ../functions.php:58
+msgid "Courses"
+msgstr "Наши курсы:"
+
+#: ../functions.php:59
+msgid "Course"
+msgstr "Курс"
+
+#: ../functions.php:60
+msgid "Our Courses"
+msgstr "Наши курсы:"
+
+#: ../functions.php:61
+msgid "All Courses"
+msgstr "Все курсы"
+
+#: ../functions.php:62
+msgid "View Course"
+msgstr "Смотреть курс"
+
+#: ../functions.php:63
+msgid "Add new Course"
+msgstr "Добавить новый курс"
+
+#: ../functions.php:64
+msgid "ADD Course"
+msgstr "Добавить курс"
+
+#: ../functions.php:65
+msgid "Edit Course"
+msgstr "Курс"
+
+#: ../functions.php:66
+msgid "Find Course"
+msgstr "Курс"
+
+#: ../functions.php:67
+msgid "no Courses found"
+msgstr "Наши курсы:"
+
+#: ../functions.php:71
+msgid "scv_courses"
+msgstr "Наши курсы:"
+
+#: ../functions.php:72
+msgid "The courses of our project."
+msgstr "Курсы нашего проекта."
+
+#: ../functions.php:94 ../functions.php:96
+msgid "Team"
+msgstr "Команда"
+
+#: ../functions.php:95
+msgid "Teacher"
+msgstr "Добавить учителя"
+
+#: ../functions.php:97
+msgid "All teachers"
+msgstr "Наши учителя"
+
+#: ../functions.php:98
+msgid "View teacher"
+msgstr "Смотреть курс"
+
+#: ../functions.php:99
+msgid "Add new teacher"
+msgstr "Добавить учителя"
+
+#: ../functions.php:100
+msgid "ADD teacher"
+msgstr "Добавить учителя"
+
+#: ../functions.php:101
+msgid "Edit teacher"
+msgstr "Добавить учителя"
+
+#: ../functions.php:105
+msgid "Our teachers"
+msgstr "Наши учителя"
+
+#: ../functions.php:106
+msgid "The teachers of our project."
+msgstr "Курсы нашего проекта."
+
+#: ../functions.php:128 ../functions.php:134
+msgid "Logo"
+msgstr "Лого"
+
+#: ../functions.php:139
+msgid "Social Links Panel"
+msgstr ""
+
+#: ../functions.php:145
+msgid "Facebook"
+msgstr ""
+
+#: ../functions.php:152
+msgid "Vkontakte"
+msgstr ""
+
+#: ../functions.php:159
+msgid "Twitter"
+msgstr ""
+
+#: ../functions.php:166
+msgid "Youtube"
+msgstr ""
+
+#: ../functions.php:173
+msgid "Vimeo"
+msgstr ""
+
+#: ../functions.php:184
+msgid "Custom Widget Area"
+msgstr "Для плагинов"
+
+#: ../functions.php:186
+msgid "An optional custom widget area for your site"
+msgstr "Кастомная виджет-ареа ;)"

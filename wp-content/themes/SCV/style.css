@@ -195,7 +195,7 @@ h4 a:link {
 }
 
 
-ul.curs li{
+ul.courses li{
     overflow:hidden;
     float:left;
     font:13px/17px "arial";
@@ -203,22 +203,22 @@ ul.curs li{
     width:410px;
     margin:23px 30px 6px 0;
 }
-ul.curs{
-    border-top:1px solid grey;
+ul.courses{
     clear:both;
+    border-top:1px solid grey;
 }
-ul.curs p{
+ul.courses p{
     width:260px;
     float:left;
     overflow:hidden;
 }
-ul.curs li:nth-child(odd){
+ul.courses li:nth-child(odd){
     margin:23px 37px 6px 0;
 }
-ul.curs li:nth-child(8){
+ul.courses li:nth-child(8){
     margin-bottom:30px;
 }
-ul.curs img{
+ul.courses img{
     display:block;
     float:left;
     border:3px dashed #F37AAC;
@@ -244,10 +244,6 @@ ul.team li{
     margin:0;
 }
 
-
-
-
-
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -256,13 +252,15 @@ ul.team li{
     margin-top:43px;
 }
 .pre_footer h5 {
-    margin:0 0 5px 68px;
+    margin:0 0 5px 0;
+    padding-left:78px;
     font:16px/27px "trebuchet ms";
     color:#447184;
     text-transform:uppercase;
     text-align:justify;
     width:227px;
     float:left;
+    border-bottom:1px solid grey;
 }
 
 .fb-like-box{
@@ -292,7 +290,7 @@ ul.sponsors{
     float:left;
     width:274px;
     height:149px;
-    border-top:1px solid grey;
+
 }
 ul.sponsors li{
     float:left;
@@ -301,8 +299,6 @@ ul.sponsors li{
     margin:0 0 0 20px;
     margin-top:25px;
 }
-
-
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
